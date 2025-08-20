@@ -1,0 +1,118 @@
+@use "../../styles/helpers" as *;
+
+
+@keyframes preload {
+	100% {
+		opacity: 0;
+	}
+
+}
+
+.preloader {
+	& {
+		position: fixed;
+		right: 0%;
+		top: 0%;
+		z-index: 24;
+		height: 100vh;
+		width: 100vw;
+		// background-color: rgb(63, 63, 63);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		row-gap: rem(0);
+
+		// display: none;
+
+		// animation: preload 1s 4s forwards;
+		// display: none;
+	}
+
+	h1 {
+		// color: white;
+		color: black;
+		font-size: rem(80);
+		font-family: 'Cambria';
+		font-weight: normal;
+	}
+
+	p {
+		margin-top: 5px;
+		font-size: clamp(rem(18), vw1920(28), rem(28));
+		// color:white;
+		color: black;
+		letter-spacing: 4px;
+	}
+
+}
+
+
+.screen_loader {
+	& {
+		position: relative;
+
+		height: clamp(rem(40), vw1920(70), rem(70));
+		aspect-ratio: 1 2;
+
+		color: rgba(255, 255, 255, 0.37);
+		display: none;
+	}
+
+}
+
+
+@keyframes fill {
+	100% {
+		fill-opacity: 1;
+		stroke-opacity: 0;
+	}
+}
+
+#line {
+	fill: white;
+	animation: fill 1s 3.5s forwards;
+
+}
+
+
+//   p{
+//     margin-top: 5px;
+//     font-size: clamp(rem(18), vw1920(28), rem(28));
+//     color:white;
+//     letter-spacing: 4px;
+// }
+// div{
+//     position: relative;
+
+//         .screen{
+//             // font-size: 100px;
+//             fill: black;
+//             stroke-opacity: 0;
+//             stroke-dashoffset: 5000;
+//         }
+//         .line_screen{
+//             stroke-width: 122;
+//             fill: rgb(133, 101, 101);
+//         }
+
+
+//           @keyframes sweep {
+//             from { transform: translateX(-30%); }
+//             to { transform: translateX(130%); }
+//           }
+
+
+//     }
+
+
+.preloader {
+	position: relative;
+	left: 50%;
+	translate: -50% 0%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: -10px;
+	margin-top: 4vh;
+}

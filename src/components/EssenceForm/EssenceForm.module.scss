@@ -1,0 +1,469 @@
+@use "../../styles/helpers" as *;
+
+.base{
+	position: relative;
+	display: flex;
+	gap: 20px;
+	margin-top: 2vh;
+	left: 50%;
+	translate: -50% 0%;
+	width: fit-content;
+	border: 0.5px solid gray;
+	border-radius: 15px;
+	padding: clamp(10px, 10vw, 30px);
+	max-height: 80vh;
+	max-width: 90vw;
+	justify-content: center;
+	
+}
+
+
+
+.baseCreate{
+	position: relative;
+	
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	
+	border-right: 0.4px solid gray;
+	padding-right: 30px;
+	
+	
+	>h2{
+
+	}
+
+	>h3{
+		border-bottom: 1px solid gray;
+		width: 85%;
+		display: block;
+		padding-bottom: 15px;
+		text-align: center;
+	}
+	>label{
+		display: flex;
+		gap: 10px;
+		input{
+			border: none;
+			border-bottom: 0.4px solid gray;
+		}
+		input:active{
+			outline: none;
+			border:none;
+		}
+		input:focus{
+			outline: none;
+			border:none;
+		}
+	}
+	
+}
+
+.windowButtons{
+	position: relative;
+	display: flex;
+	width: 95%;
+	// gap: 20px;
+	justify-content: space-between;
+
+	div{
+		position: relative;
+		display: flex;
+		gap: 15px;
+		max-height: 37px;
+		input{
+			position: relative;
+			max-width: 30%;
+			border-radius: 5px;
+			border: 0.6px solid gray;
+			
+		}
+	}
+
+	button{
+		&{
+			position: relative;
+			padding: 10px 15px;
+			// margin-top: 20px;
+			// bottom: 1%;
+			transition: 0.2s background, 0.2s color;
+			border-radius: 5px;
+			border: 0.6px solid gray;
+			max-height: 37px;
+			display: block;
+			align-items: center;
+			justify-content: center;
+			min-width: 170px;
+		}
+		&:hover{
+			cursor: pointer;
+			background: black;
+			color:white;
+		}
+	}
+}
+
+.buttonCreate{
+	&{
+		position: relative;
+		padding: 10px 15px;
+		// margin-top: 20px;
+		// bottom: 1%;
+		transition: 0.2s background, 0.2s color;
+		border-radius: 5px;
+		border: 0.6px solid gray;
+	}
+	&:hover{
+		cursor: pointer;
+		background: black;
+		color:white;
+	}
+}
+
+
+.windowComponentCreate{
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 20px 20px;
+	max-width: 40vw;
+	padding-bottom: 40px;
+	padding-inline: 20px;
+
+	overflow: auto;
+
+	>div{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		padding: 5px 10px;
+
+		border-radius: 10px;
+		border: 0.5px solid gray;
+
+		>div{
+			width: 100%;
+			padding-bottom: 10px;
+			border-bottom: 0.5px dashed gray;
+		}
+		button{
+			margin-top: 10px;
+			border-radius: 5px;
+			padding: 5px 8px;
+			font-size: 11px;
+			background: rgba(211, 17, 17, 0.918);
+			color: white;
+			border:none
+		}
+		button:hover{
+			cursor: pointer;
+			background: rgba(134, 43, 43, 0.918);
+			color: white
+		}
+	}
+}
+
+.baseList{
+	position: relative;
+	padding-left: 30px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	
+	>h3{
+		margin-bottom: 20px;
+	}
+	>div{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		max-height: 90%;
+		overflow: auto;
+	}
+
+	>button{
+		margin-top: 10px;
+	}
+}
+
+
+.baseElList{
+
+}
+
+.windowElementList:not(:last-child){
+	border-bottom: 0.8px dashed gray;
+}
+.windowElementList{
+	position: relative;
+	display: flex;
+	gap: 20px;
+	// margin-bottom: 15px;
+	padding-block: 15px;
+	
+	justify-content: space-between;
+	align-items: center;
+
+	>div{
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+		align-items: center;
+		justify-content: center;
+	}
+
+	button{
+		background: rgba(211, 17, 17, 0.918);
+		color: white;
+		padding: 12px 14px;
+		border-radius: 5px;
+		border: none;
+		transition: 0.3s background;
+		height: fit-content;
+	}
+	button:hover{
+		cursor: pointer;
+		background: rgba(134, 43, 43, 0.918);
+	}
+}
+
+
+.delete{
+	position: absolute;
+	position: relative;
+	padding: 10px 15px;
+	// margin-top: 20px;
+	// bottom: 1%;
+	transition: 0.2s background, 0.2s color;
+	border-radius: 5px;
+	border: 0.6px solid gray;
+
+}
+.delete:hover{
+	cursor: pointer;
+	background: black;
+	color:white;
+
+}
+
+
+
+@include laptop{
+	.base{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.baseCreate{
+		
+		border: none;
+		padding-right: none;
+		
+		
+		>h2{
+			font-size: 18px;
+		}
+		>h3{
+			font-size: 16px;
+		}
+		>label{
+			font-size: 12px;
+			input{
+				font-size: 12px;
+			}
+			input:active{
+			}
+			input:focus{
+			}
+		}
+		
+	}
+	
+	.windowButtons{
+		margin-bottom: 50px;
+		div{
+			flex-direction: column;
+			justify-content: center;
+			input{
+				min-width: 150px;
+				min-height: 35px;
+			}
+		}
+	
+		button{
+			&{
+			}
+			&:hover{
+			}
+		}
+	}
+	
+	.buttonCreate{
+		&{
+		}
+		&:hover{
+		}
+	}
+	
+	
+	.windowComponentCreate{
+	
+		>div{
+	
+			>div{
+			}
+			button{
+			}
+			button:hover{
+			}
+		}
+	}
+	
+	.baseList{
+		padding-left: none;
+		justify-content: center;
+		align-items: center;
+		>h3{
+		}
+		>div{
+			justify-content: center;
+			align-items: center;
+		}
+	
+		>button{
+		}
+	}
+	
+	
+	.baseElList{
+	
+	}
+	
+	.windowElementList:not(:last-child){
+	}
+	.windowElementList{
+	
+		>div{
+		}
+	
+		button{
+		}
+		button:hover{
+		}
+	}
+	
+	
+	.delete{
+	
+	}
+	.delete:hover{
+	}
+}
+
+@include mobile{
+	.base{
+		flex-direction: column;
+	}
+
+
+	.baseCreate{
+		padding-right: none;
+		
+		
+		>h2{
+			font-size: 12px;
+		}
+		>label{
+			font-size: 10px;
+			input{
+			}
+			input:active{
+			}
+			input:focus{
+			}
+		}
+		
+	}
+	
+	.windowButtons{
+	
+		div{
+			input{
+				
+			}
+		}
+	
+		button{
+			&{
+			}
+			&:hover{
+			}
+		}
+	}
+	
+	.buttonCreate{
+		&{
+		}
+		&:hover{
+		}
+	}
+	
+	
+	.windowComponentCreate{
+	
+		>div{
+	
+			>div{
+			}
+			button{
+			}
+			button:hover{
+			}
+		}
+	}
+	
+	.baseList{
+		padding-left: none;
+		
+		>h3{
+		}
+		>div{
+		}
+	
+		>button{
+		}
+	}
+	
+	
+	.baseElList{
+	
+	}
+	
+	.windowElementList:not(:last-child){
+	}
+	.windowElementList{
+	
+		>div{
+		}
+	
+		button{
+		}
+		button:hover{
+		}
+	}
+	
+	
+	.delete{
+	
+	}
+	.delete:hover{
+	}
+}

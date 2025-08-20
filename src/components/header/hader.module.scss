@@ -1,0 +1,158 @@
+@use "../../styles/helpers" as *;
+
+.Header {
+	// position: fixed;
+	position: relative;
+	display: flex;
+	// top: 70%;
+
+	left: 50%;
+	translate: -50% -50%;
+	translate: -50% 0%;
+	flex-direction: column;
+	gap: 15px;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+	width: fit-content;
+	// background-color: rgba(127, 255, 212, 0.575);
+	// background: radial-gradient(circle, #ffffff00 40%, #096bc78c 50%, #eeeeee00 55%, );
+	// background-size: 100%;
+	// overflow: visible;
+	z-index: 120;
+
+
+
+	div {
+		display: flex;
+		gap: 30px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid black;
+
+	}
+
+	h1 {
+		position: relative;
+		font-size: 20px;
+		// background: radial-gradient(circle, #ffffff00 50%, #096bc78c 80%, #eeeeee00 85%, );
+		overflow: visible;
+
+	}
+
+	a:hover {
+		color: gray;
+		transition: color 0.2s;
+
+	}
+
+	a:hover::after {
+		content: "";
+		height: 1px;
+		background: black;
+		width: 100%;
+		border-bottom: 1px solid black;
+	}
+}
+
+
+.userBlock {
+	& {
+		position: absolute;
+		right: 2%;
+		top: 3%;
+		display: flex;
+		gap: 10px;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
+		border: 0.7px solid gray;
+		border-radius: 10px 0px 0px 10px;
+
+		border-radius: 10px 5px 5px 10px;
+
+		padding: 10px;
+		width: clamp(120px, 23vw, 180px);
+		justify-content: start;
+		overflow: hidden;
+	}
+
+	div {
+		display: flex;
+		flex-direction: row;
+		gap: 5px;
+		justify-content: center;
+		align-items: center;
+		// border: 0.5px solid gray;
+		border-radius: 10px 0px 0px 10px;
+
+		border-radius: 10px 5px 5px 10px;
+
+		border-right: none;
+
+		font-size: clamp(7px, 2vw, 16px);
+		;
+		// padding: 10px;
+	}
+
+	span {}
+
+	button {
+		height: fit-content;
+		position: absolute;
+		right: 0%;
+		height: 100%;
+		padding: 7px 10px;
+		padding: clamp(3px, 2vw, 7px) clamp(4px, 0.7vw, 10px);
+		;
+		background: none;
+		border-radius: 10px 0px 0px 10px;
+		border-radius: 10px 5px 5px 10px;
+
+		border: 0.5px solid gray;
+		font-size: clamp(7px, 2vw, 14px);
+		border-right: none;
+		width: 35%;
+
+		transition: background 0.4s, color 0.4s, width 0.5s ease, border 0.2s;
+
+		@keyframes logOut {
+			100% {
+				width: 100%;
+			}
+		}
+
+		&:hover {
+			background: black;
+			color: white;
+			border: none;
+			// animation: logOut 1s forwards;
+			width: 100%;
+			cursor: pointer;
+		}
+	}
+}
+
+
+@include mobile {
+	.Header {
+		left: 35vw;
+
+		>div {
+			max-width: 50vw;
+			// max-width: 30vw;
+
+			overflow: auto;
+
+		}
+
+		a {
+			font-size: 14px;
+		}
+
+		>a {
+			h1 {
+				font-size: 16px;
+			}
+		}
+	}
+}

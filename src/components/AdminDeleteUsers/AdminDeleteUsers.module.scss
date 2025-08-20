@@ -1,0 +1,78 @@
+.base {
+	padding: 20px;
+	max-width: 500px;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+}
+
+.title {
+	font-size: 24px;
+	margin-bottom: 16px;
+	color: #222;
+}
+
+.message {
+	margin-bottom: 12px;
+	color: #d9534f;
+	/* красный для ошибок */
+}
+
+.list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	min-width: 400px;
+}
+
+.listItem {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 12px;
+	border-bottom: 1px solid #ddd;
+}
+
+.listItem:last-child {
+	border-bottom: none;
+}
+
+.deleteButton {
+	background-color: #d9534f;
+	border: none;
+	color: white;
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.deleteButton:hover {
+	background-color: #c9302c;
+}
+
+.emptyMessage {
+	color: #666;
+	font-style: italic;
+}
+
+
+
+
+.uodateButton {
+	background-color: none;
+	border: 0.3px solid gray;
+	color: black;
+	padding: 6px 12px;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.uodateButton:hover {
+	background-color: #000000;
+	color: white;
+}

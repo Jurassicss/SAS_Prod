@@ -1,0 +1,169 @@
+.title {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.base {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+}
+
+
+.list,
+.listBase {
+	width: 60vw;
+}
+
+.listBase {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	border-radius: 5px;
+
+	border: 0.4px solid gray;
+}
+
+.buttonBase {
+	& {
+		position: relative;
+
+		background: none;
+		border-radius: 4px;
+		padding: 5px 7px;
+		font-size: 16px;
+		border: 1px solid black;
+
+		transition: 0.3s;
+		transition-property: color, background-color;
+	}
+
+	
+}
+
+.buttonBase[data-js-state='isActive'] {
+	background-color: black;
+	color: white;
+}
+
+
+.buttonState {
+	position: absolute;
+	right: 5%;
+	translate: -50% 0%;
+	padding: 4px 10px;
+	font-size: 12px;
+	background: none;
+	border-radius: 5px;
+	
+	border: 0.4px solid gray;
+	transition: 0.25s background, 0.25s color;
+
+	// background: rgb(17, 224, 10);
+}
+
+
+
+
+
+.list {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-left: 20px;
+	padding-bottom: 20px;
+	
+}
+
+
+.contButtonBase {
+	position: relative;
+	display: flex;
+	width: 100%;
+	/* Начальная ширина 0 */
+	transition: width 0.3s ease;
+	/* Плавное изменение ширины */
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	
+}
+
+// .contButtonBase::after {
+// 	content: "";
+// 	position: absolute;
+// 	bottom: 0%;
+// 	/*  Расположение полоски снизу */
+// 	left: 50%;
+// 	/*  Расположение полоски слева */
+// 	width: 0%;
+// 	/*  Ширина полоски */
+// 	height: 1px;
+// 	/*  Высота полоски */
+// 	background-color: rgb(0, 0, 0);
+// 	/*  Цвет полоски */
+// 	transition: width 0.3s ease-in-out;
+// 	/*  Анимация изменения прозрачности */
+// 	transform: translateX(-50%);
+// }
+
+// .contButtonBase[data-js-state='isActive'] {
+// 	&::after {
+// 		width: 100%;
+// 		/*  Ширина полоски */
+// 	}
+
+// }
+
+
+
+.line {
+	position: absolute;
+	bottom: 0;
+	width: 50%;
+	height: 1px;
+	border-radius: 1px;
+	background-color: black;
+	transform: scaleX(0);
+	width: 100%;
+}
+
+.contButtonBase {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden; // важно, чтобы не вылезали линии
+}
+
+
+
+
+@media (hover: hover) and (pointer: fine) {
+	.buttonState:hover{
+		cursor: pointer;
+		background: rgb(17, 224, 10);
+		// color: rgb(167, 39, 39);
+	}
+	.buttonBase:hover {
+		cursor: pointer;
+		background-color: black;
+		color: white;
+	}
+}
+
+@media (hover: none) {
+	.buttonState:active, .buttonState:focus {
+		background: rgb(17, 224, 10);
+	}
+	.buttonBase:hover {
+		cursor: pointer;
+		background-color: black;
+		color: white;
+	}
+  }

@@ -1,0 +1,63 @@
+@use "helpers" as *;
+
+
+
+@font-face {
+    font-family: 'NimbusSanL';
+    src: url('/fonts/nimbus-sans-l/NimbusSanL-ReguCond.ttf') format('truetype');
+    // letter-spacing: #{rem(30)};
+    font-display: swap;
+    font-weight: 100;
+}
+
+
+@font-face {
+    font-family: 'Cambria';
+    src: local('Cambria'),
+    url('/fonts/Cambria.woff2') format('woff2');
+    font-weight: 200;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Helvetica-light';
+    src: url('/fonts/helvetica_light.woff2') format('woff2');
+    font-display: swap;
+    font-weight: 400;
+}
+
+
+
+@font-face {
+    font-family: 'TT-Hoves-Pro';
+    src: url('/fonts/TT/TT Hoves Pro Trial ExtraLight.ttf') format('truetype');
+    letter-spacing: #{rem(30)};
+    font-display: swap;
+    font-weight: 1000;
+}
+
+@font-face {
+    font-family: 'TT-Interphases-Pro';
+    src: url('/fonts/TT_Interphases/WOFF2/TT_Interphases_Pro_Trial_Regular.woff2') format('woff2');
+    // letter-spacing: #{rem(30)};
+    font-display: swap;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Arimo';
+    src: url('/fonts/Arimo-Regular.ttf') format('truetype');
+    // letter-spacing: #{rem(30)};
+    font-display: swap;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'TT Jenevers';
+    src: url('/fonts/TT Jenevers Trial Light.ttf') format('truetype');
+    // letter-spacing: #{rem(30)};
+    font-display: swap;
+    font-weight: 400;
+}
+

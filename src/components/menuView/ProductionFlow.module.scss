@@ -1,0 +1,660 @@
+@use "../../styles/helpers" as *;
+
+.WindowBase {
+	position: relative;
+	left: 50%;
+	// top: 10vh;
+	top: 50%;
+	translate: -50% -50%;
+	height: 90%;
+	width: 70vw;
+	display: flex;
+	border: 1.5px solid black;
+	border-radius: 20px;
+
+	user-select: none;
+
+}
+
+// .listProd {
+// 	position: relative;
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	justify-content: space-between;
+
+// 	min-width: 200px;
+// 	border-right: 0.75px double gray;
+
+// 	.listUp {
+// 		position: relative;
+// 		overflow: hidden;
+// 		display: flex;
+// 		flex-direction: column;
+// 		justify-content: center;
+// 		align-items: center;
+// 		width: 100%;
+// 		top: 0;
+
+// 		h3,
+// 		.menuFilter {
+// 			margin-top: 20px;
+// 			padding-bottom: 20px;
+// 			border-bottom: 0.75px double gray;
+// 			width: inherit;
+// 			text-align: center;
+// 			// overflow: hidden;
+// 		}
+
+// 		.menuFilter {
+// 			position: relative;
+
+// 			display: flex;
+// 			flex-direction: row;
+// 			justify-content: center;
+// 			align-items: center;
+// 			gap: 7px;
+
+// 			min-width: 300px;
+
+// 			height: fit-content;
+
+// 			button {
+// 				padding: 0;
+// 				border: none;
+// 				font: inherit;
+// 				color: inherit;
+// 				background-color: transparent;
+
+// 				position: relative;
+// 				background: none;
+// 				cursor: pointer;
+// 				// color: gray;
+// 				transition: 0.4s color;
+// 				outline: none;
+
+// 				padding-right: 7px;
+// 			}
+
+// 			button:hover {
+// 				color: gray;
+// 			}
+
+// 			button:not(:last-child) {
+// 				border-right: 0.6px solid gray;
+// 				border-radius: 0px;
+// 			}
+
+// 			.buttonActive {
+// 				color: gray;
+// 			}
+// 		}
+
+
+// 	}
+
+
+// 	.contextInfo {
+// 		overflow: hidden;
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: center;
+// 		justify-content: center;
+// 		height: fit-content;
+// 		padding-block: 20px;
+// 		border-top: 0.6px solid gray;
+// 		width: 100%;
+// 	}
+
+// 	.list {
+// 		position: relative;
+// 		overflow: auto;
+// 		display: flex;
+// 		flex-direction: column;
+// 		gap: 15px;
+
+// 		padding: 0;
+// 		margin: 0;
+// 		width: 100%;
+// 		align-items: center;
+// 		gap: 10px;
+// 		padding-block: 20px;
+// 		max-height: clamp(50%, 45vh, 70%);
+
+// 		>button {
+// 			position: relative;
+// 			width: 50%;
+// 			transition: background 0.4s, border-radius 0.4s, width 0.4s;
+// 			white-space: nowrap;
+// 			overflow: hidden;
+// 			// height: fit-content;
+
+// 			display: block;
+
+// 			overflow: hidden;
+// 			// text-overflow: ellipsis;
+// 			white-space: nowrap;
+// 			max-width: 100%;
+
+// 			// height: 200px;
+// 			// display: flex;
+// 			// align-items: center;
+// 			// justify-content: center;
+
+// 			// overflow-y: auto;
+
+// 			background: #0000002a;
+// 			border: none;
+// 			padding: 7px 10px;
+// 			border-radius: 4px;
+// 			height: fit-content;
+// 		}
+
+// 		button:hover {
+// 			cursor: pointer;
+// 			background: blue;
+// 			color: white;
+// 			width: 80%;
+// 			// height: 100px;
+
+// 			border-radius: 10px;
+// 		}
+// 	}
+
+// }
+.listProd {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	height: 100%;
+	min-width: 200px;
+	border-right: 0.75px double gray;
+
+	.listUp {
+		width: 100%;
+
+		h3,
+		.menuFilter {
+			margin-top: 20px;
+			padding-bottom: 20px;
+			border-bottom: 0.75px double gray;
+			width: inherit;
+			text-align: center;
+		}
+
+		.menuFilter {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 7px;
+			min-width: 200px;
+
+			padding-inline: 10px;
+
+			button {
+				padding: 0;
+				border: none;
+				font: inherit;
+				color: inherit;
+				background-color: transparent;
+				cursor: pointer;
+				transition: 0.4s color;
+				padding-right: 7px;
+			}
+
+			button:hover {
+				color: gray;
+			}
+
+			button:not(:last-child) {
+				border-right: 0.6px solid gray;
+			}
+
+			.buttonActive {
+				color: gray;
+			}
+		}
+	}
+
+	.list {
+		flex: 1;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding-block: 20px;
+		overflow-y: auto;
+		gap: 10px;
+
+
+		// >button {
+		// 	position: relative;
+		// 	width: 80%;
+		// 	transition: background 0.4s, border-radius 0.4s, width 0.4s;
+
+		// 	display: block;
+		// 	background: #0000002a;
+		// 	border: none;
+		// 	padding: 10px 14px;
+		// 	border-radius: 4px;
+		// 	height: fit-content;
+
+		// 	font-size: 14px;
+		// 	line-height: 1.4;
+		// 	text-align: center;
+		// 	width: 50%;
+		// 	min-height: 38px;
+		// 	min-width: 100px;
+
+		// 	white-space: nowrap;
+
+		// 	overflow-wrap: break-word;
+		// 	word-break: break-word;
+		// 	overflow: hidden;
+		// 	padding-inline: 5px;
+		// }
+
+		// button:hover {
+		// 	cursor: pointer;
+		// 	background: blue;
+		// 	color: white;
+		// 	border-radius: 10px;
+		// 	width: 90%;
+		// }
+		>button {
+			position: relative;
+			display: block;
+			width: 60%; // начальная ширина
+			min-width: 100px;
+			min-height: 38px;
+
+			padding: 10px 14px;
+			padding-inline: 5px;
+
+			background: #0000002a;
+			border: none;
+			border-radius: 4px;
+
+			font-size: 14px;
+			line-height: 1.4;
+			text-align: center;
+
+			overflow: hidden;
+			white-space: nowrap;
+			word-break: break-word;
+
+			transition:
+				background 0.4s ease,
+				border-radius 0.4s ease,
+				width 0.4s ease,
+				color 0.4s ease;
+		}
+
+		>button:hover {
+			cursor: pointer;
+			background: blue;
+			color: white;
+			width: 90%; // чуть шире
+			border-radius: 10px;
+			will-change: width;
+		}
+
+	}
+
+	.contextInfo {
+		width: 100%;
+		padding-block: 20px;
+		border-top: 0.6px solid gray;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
+.labelFlow {
+	position: relative;
+	padding-block: 15px;
+	left: 50%;
+	translate: -50% 0%;
+	width: fit-content;
+	border-bottom: 0.4px solid gray;
+
+
+
+	span {
+		color: #0070f3;
+	}
+}
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+
+
+.flipCard {
+	width: 160px;
+	height: 100px;
+	perspective: 1000px;
+}
+
+.flipCardInner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.6s;
+}
+
+.flipCard:hover .flipCardInner {
+	transform: rotateY(180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	backface-visibility: hidden;
+	border-radius: 5px;
+	border: 1px solid #777;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.flipCardFront {
+	background-color: #e0f7fa;
+}
+
+.flipCardBack {
+	background-color: #fce4ec;
+	transform: rotateY(180deg);
+	display: none;
+}
+
+
+
+
+.nodeContainer {
+	width: 160px;
+	height: 100px;
+	perspective: 1000px;
+}
+
+
+.side {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+
+.front {
+	background-color: #e3f2fd;
+}
+
+.back {
+	background-color: #ffe082;
+	transform: rotateY(180deg);
+}
+
+
+
+.nodeContainer {
+	perspective: 1000px;
+}
+
+.side {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.front {
+	background-color: white;
+	z-index: 2;
+}
+
+.back {
+	background-color: lightgray;
+	transform: rotateY(180deg);
+}
+
+.bottomTooltip {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(255, 255, 255, 0.9);
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 6px;
+	z-index: 10;
+}
+
+.labelFlow {
+	position: absolute;
+	font-size: 14px;
+	padding-block: 10px;
+	padding-inline: 20px;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.363);
+	border-radius: 0px 0px 15px 15px;
+}
+
+.loadFlow {
+	position: relative;
+	width: fit-content;
+	left: 50%;
+	top: 50%;
+	translate: -50% -50%;
+	background: black;
+	background: radial-gradient(circle at 50%, #333, #333 30%, #eee 100%, #333 100%);
+	color: white;
+	padding: 20px 30px;
+	border-radius: 10px;
+	// border-radius: 50%;
+	// aspect-ratio: 1;
+}
+
+.tooltip {
+	background: #333;
+	color: white;
+	padding: 6px 12px;
+	border-radius: 6px;
+	font-size: 13px;
+	white-space: nowrap;
+	z-index: 999;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	transition: opacity 0.2s ease;
+}
+
+@include laptop {
+	.list {
+		& {}
+	}
+
+	.WindowBase {
+		& {
+			flex-direction: column;
+			width: 90vw;
+		}
+	}
+
+	.listProd {
+
+		div {
+			flex-direction: row;
+		}
+	}
+
+	.WindowBase {
+		flex-direction: column;
+		width: 95vw;
+		height: 75vh;
+	}
+
+	.listProd {
+		flex-direction: row;
+		width: 100%;
+		min-width: unset;
+		height: auto;
+		border-right: none;
+		border-bottom: 1px solid gray;
+		max-height: 45%;
+
+		.listUp {
+			flex: 1;
+			border-bottom: none;
+			border-right: 1px solid gray;
+			// padding: 10px;
+			padding-block: 10px;
+			height: 100%;
+			align-items: end;
+			justify-content: space-between;
+
+			h3 {
+				font-size: 16px;
+			}
+
+			.menuFilter {
+				position: relative;
+				flex-direction: column;
+				gap: 5px;
+				border-bottom: none;
+				width: 30%;
+				left: 50%;
+				translate: -50% 0%;
+				border-right: 0.6px solid gray;
+				padding: 0;
+
+
+				button {
+					padding: 0px;
+					padding-block: 5px;
+					width: 100%;
+				}
+
+				button:not(:last-child) {
+					border-right: none;
+					border-bottom: 0.6px solid gray;
+
+
+				}
+
+			}
+		}
+
+		.list {
+			flex: 1;
+			// max-height: 40vh;
+			max-height: 100%;
+			overflow-y: auto;
+		}
+
+		.contextInfo {
+			position: absolute;
+			border: none;
+			padding: 0px;
+			width: fit-content;
+			left: 50%;
+			bottom: 0%;
+			translate: -50% 0%;
+			background-color: #777;
+			color: white;
+			padding: 10px 20px;
+			border-radius: 10px 10px 0px 0px;
+
+
+			// bottom: 15%;
+			// border-radius: 10px;
+		}
+	}
+
+	// .labelFlow {
+	// 	position: absolute;
+	// 	font-size: 14px;
+	// 	padding-block: 10px;
+	// 	padding-inline: 20px;
+	// 	z-index: 10;
+	// 	background: rgba(0, 0, 0, 0.363);
+	// 	border-radius: 0px 0px 15px 15px;
+	// }
+}
+
+@include mobile {
+
+	.WindowBase {
+		width: 98vw;
+		height: 80vh;
+		border-radius: 10px;
+	}
+
+	.listProd {
+		flex-flow: column wrap;
+		align-items: center;
+		// padding-inline: 10px;
+
+		.listUp {
+			align-items: center;
+			flex-direction: row;
+			width: 100%;
+			border-right: none;
+
+
+			h3 {
+				font-size: 14px;
+			}
+
+			.menuFilter {
+				// flex-wrap: wrap;
+				justify-content: center;
+				border-right: none;
+
+				button {
+					font-size: 12px;
+				}
+			}
+		}
+
+		.list {
+			gap: 8px;
+
+			button {
+				width: 100%;
+				font-size: 12px;
+				padding: 6px;
+			}
+		}
+
+		.contextInfo {
+			right: 0%;
+			display: none;
+		}
+	}
+
+	.labelFlow {
+		font-size: 12px;
+
+		span {
+			font-weight: bold;
+		}
+	}
+
+	.bottomTooltip {
+		font-size: 12px;
+		padding: 6px;
+	}
+}

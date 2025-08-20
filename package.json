@@ -1,21 +1,59 @@
 {
-  "name": "for-prod-app",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "next": "15.3.4"
-  },
-  "devDependencies": {
-    "eslint": "^9",
-    "eslint-config-next": "15.3.4",
-    "@eslint/eslintrc": "^3"
-  }
+	"name": "for-prod-app",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbo --hostname 0.0.0.0 --port 3000",
+		"build": "next build ",
+		"start": "next start",
+		"lint": "next lint",
+		"https-proxy": "node https-proxy.js"
+	},
+	"dependencies": {
+		"@react-pdf/renderer": "^4.3.0",
+		"@tiptap/core": "^3.0.7",
+		"@tiptap/starter-kit": "^3.0.7",
+		"axios": "^1.10.0",
+		"bcrypt": "^6.0.0",
+		"date-fns": "^4.1.0",
+		"docx-preview": "^0.3.6",
+		"docxtemplater": "^3.65.2",
+		"dynamic": "^4.2.2",
+		"express": "^5.1.0",
+		"framer-motion": "^12.23.3",
+		"frappe-gantt": "^1.0.3",
+		"get-port": "^7.1.0",
+		"gsap": "^3.13.0",
+		"http-proxy-middleware": "^3.0.5",
+		"libreoffice": "^0.4.5",
+		"lucide-react": "^0.539.0",
+		"mammoth": "^1.9.1",
+		"next": "^15.3.4",
+		"next-pwa": "^5.6.0",
+		"pdf-lib": "^1.17.1",
+		"pdfjs-dist": "^5.3.31",
+		"pg": "^8.16.3",
+		"qrcode": "^1.5.4",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-hook-form": "^7.59.0",
+		"react-pdf": "^10.0.1",
+		"react-select": "^5.10.2",
+		"reactflow": "^11.11.4",
+		"recharts": "^3.0.2",
+		"redocx": "^1.1.4",
+		"ssh2": "^1.16.0",
+		"tunnel-ssh": "^5.2.0",
+		"uuid": "^11.1.0",
+		"zustand": "^5.0.6"
+	},
+	"devDependencies": {
+		"@eslint/eslintrc": "^3",
+		"autoprefixer": "^10.4.21",
+		"eslint": "^9",
+		"eslint-config-next": "15.3.4",
+		"postcss": "^8.5.6",
+		"sass": "^1.89.2",
+		"tailwindcss": "^4.1.11"
+	}
 }

@@ -1,0 +1,21 @@
+.container {
+	display: flex;
+	flex-direction: column; // чтобы SCREEN и сообщение были друг под другом
+	justify-content: center; // вертикальное центрирование
+	align-items: center;     // горизонтальное центрирование
+	height: 100vh;
+	background-color: #333;
+	color: #fff;
+	font-size: 1.5rem;
+	user-select: none;
+  }
+  
+  .screen {
+	font-size: 7rem;
+	margin-bottom: 1rem; // расстояние между SCREEN и сообщением
+  }
+  
+  .message {
+	text-align: center;
+  }
+  

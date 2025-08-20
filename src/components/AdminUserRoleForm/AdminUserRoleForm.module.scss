@@ -1,0 +1,74 @@
+.baseWindow {
+	& {
+		position: relative;
+		width: 90vw;
+		left: 50%;
+		translate: -50% 0%;
+		display: grid;
+		grid-template-rows: auto 1fr; // верхняя строка авто высоты, нижняя — занимает остаток
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"header header"
+			"left   right";
+	}
+}
+
+
+.base {
+	position: relative;
+	grid-area: header;
+	left: 50%;
+	translate: -50% 0%;
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin-top: 50px;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 50px;
+	border-bottom: 0.8px dashed gray;
+
+	input {}
+
+	select {}
+
+
+	input,
+	select,
+	button {
+		position: relative;
+		padding: 5px 10px;
+		border-radius: 5px;
+		border: 0.6px solid gray;
+	}
+
+
+	button:hover {
+		cursor: pointer;
+		color: white;
+		background: black;
+	}
+
+	form:nth-child(2) {
+		display: flex;
+		gap: 40px;
+	}
+
+
+	form:nth-child(4) {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		align-items: center;
+
+		div {
+			display: flex;
+			gap: 20px;
+		}
+
+		button {
+			width: fit-content;
+		}
+	}
+}

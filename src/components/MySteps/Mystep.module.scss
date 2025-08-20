@@ -1,0 +1,65 @@
+.baseWindow{
+    &{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0vh;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+    }
+    ul::-webkit-scrollbar {
+        height: 90px;
+    }
+    ul{
+        &{
+
+        
+            padding: 20px;
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            height: 70vh;
+            border-radius: 30px;
+            border: 1px solid black;
+            overflow: auto;
+            height: fit-content;
+            max-height: 60vh;
+        }
+        li{
+            &{
+                padding: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            
+
+            button{
+                &{
+                    background: none;
+                    padding: 5px;
+                    border-radius: 4px 4px 10px 10px;
+                }
+                
+
+                &:hover{
+                    background: black;
+                    color: white;
+                    cursor: pointer;
+                }
+
+            }
+        }
+        li:not(:last-child){
+            border-bottom: 1px solid gray;
+        }
+    }
+}
+
+
+.title{
+    font-size: 35px;
+}

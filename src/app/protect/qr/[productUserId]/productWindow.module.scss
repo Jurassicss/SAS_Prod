@@ -1,0 +1,67 @@
+@use "../../../../styles/helpers" as *;
+
+.load {
+	position: relative;
+	left: 50%;
+	translate: -50% 0%;
+	top: 30vh;
+
+}
+
+
+.base {
+
+	& {
+		position: relative;
+		// margin-top: 25vh;
+		top: 2vh;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		align-items: center;
+		width: fit-content;
+		left: 50%;
+		translate: -50% 0%;
+		padding-inline: 50px;
+		padding-block: 40px;
+
+		border-radius: 20px;
+		border: 1px solid gray;
+		max-height: 80vh;
+		overflow: auto;
+	}
+
+	h2 {
+		margin-bottom: 30px;
+	}
+
+
+	p {}
+
+	p:nth-child(2) {}
+
+	p:nth-child(2) {}
+
+	button {
+		margin-top: 10px;
+		background: none;
+		border-radius: 5px;
+		border: 0.5px solid gray;
+		padding: 8px;
+	}
+
+	button:hover {
+		background: black;
+		color: white;
+	}
+}
+
+@include mobile {
+	.base {
+		width: 90vw;
+
+		h2 {
+			// margin-bottom: 10px;
+		}
+	}
+}

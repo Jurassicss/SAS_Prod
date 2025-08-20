@@ -1,0 +1,140 @@
+@use "helpers" as *;
+
+html{
+    width: 100%;
+    
+}
+
+body[data-js-state='isActive'] {
+    
+    >:not(.header) {
+        filter: blur(10px);
+        transition: filter 0.4s;
+        pointer-events: none;
+    }
+    
+}
+
+
+body{
+    &{
+        position: relative;
+        height: auto;
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        
+        font-family: 'Helvetica-light';
+        // font-family: 'Arimo';
+        // font-family: TeX Gyre Heros Regular;
+        font-family: 'TT-Hoves-Pro';
+        font-family: 'TT-Interphases-Pro';
+        // font-family: 'Arial';
+        // font-family: 'NimbusSanL';
+        letter-spacing: rem(0.8);
+        
+        justify-content: end;
+        
+        // overflow-x: hidden;      ///разобраться почему body выходит за границы. Временное решение обрезанием.
+    }
+}
+
+
+body.no-scroll {
+    scrollbar-gutter: stable;
+    overflow: hidden;
+    // position: fixed;
+    // padding-right: 0px;
+    touch-action: none;
+}
+
+
+.header{
+    display: flex;
+}
+
+
+main{
+    &{
+        top: var(--margin-head);
+        position: relative;
+        flex-grow: 1;
+        transition: filter 0.3s;
+    }
+}
+
+footer[data-js-state='isActive']{
+    &{
+        transition: filter 0.3s;
+        // filter: blur(10px);
+    }
+}
+
+
+
+a{
+    &{
+        cursor: pointer;
+    }
+}
+
+
+
+
+
+
+
+
+
+// /* Основные стили для скроллбара (работает в Chrome, Edge, Safari) */
+// ::-webkit-scrollbar {
+//     width: 12px;               /* Ширина вертикального скроллбара */
+// }
+
+// /* Дорожка скроллбара */
+// ::-webkit-scrollbar-track {
+//     background: #ffffff;       /* Цвет фона */
+//     border-radius: 7px;       /* Закругление углов */
+//     height: 9vh;
+// }
+
+// /* Ползунок скроллбара */
+// ::-webkit-scrollbar-thumb {
+//     transition: background 1.8s;
+//     width: 12px;
+//     border-radius: 7px;       /* Закругление углов */
+//     border: 0px solid #f1f1f1; /* Отступ вокруг ползунка */
+//     background: linear-gradient(60deg, #ffffff, #2e6ee5);
+//     background: rgb(92, 91, 91);
+// }
+
+
+
+// /* Ползунок при наведении */
+// ::-webkit-scrollbar-thumb:hover {
+//     background: rgba(121, 121, 121, 0.733);
+// }
+
+// /* Стили для Firefox */
+// // * {
+//     //   scrollbar-width: 12px;               /* "auto" | "thin" | "none" */
+//     //   scrollbar-color: #ffffff #586fbb;       /* thumb track */
+    
+// // }
+
+
+// /* Стрелка вверх */
+// ::-webkit-scrollbar-button:vertical:start:decrement {
+//     height: 20px;
+//     display: block;
+//     background-color: #ffffff;
+//     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 14l5-5 5 5z'/%3E%3C/svg%3E");
+// }
+
+// /* Стрелка вниз */
+// ::-webkit-scrollbar-button:vertical:end:increment {
+//     height: 20px;
+//     display: block;
+//     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23666'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+// }

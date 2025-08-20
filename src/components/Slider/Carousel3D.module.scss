@@ -1,0 +1,106 @@
+.carouselContainer {
+	position: relative;
+	left: 50%;
+	translate: -50% 0%;
+	height: 75vh;
+	perspective: 80vw;
+	overflow: hidden;
+	overflow: visible;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	top: 70px;
+	gap: 60px;
+}
+
+.carouselScene {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	top: 0%;
+	transform-style: preserve-3d;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slide {
+	position: absolute;
+	left: 0%;
+	// transform: translateX(-50%);
+	top: 0%;
+	// width: fit-content;
+	// height: fit-content;
+
+	width: inherit;
+	height: inherit;
+	transition: transform 0.6s ease;
+	transform-style: preserve-3d;
+}
+
+// .navLeft,
+// .navRight {
+// 	position: absolute;
+// 	position: relative;
+// 	font-size: 2.5rem;
+// 	top: 90%;
+// 	transform: translateY(-50%);
+// 	background: rgba(0, 0, 0, 0.4);
+// 	border: none;
+// 	color: white;
+// 	padding: 0.5rem;
+// 	border-radius: 10px;
+// 	cursor: pointer;
+// 	z-index: 100;
+// 	user-select: none;
+// 	display: flex;
+// 	align-items: center;
+// 	height: fit-content;
+
+// 	// height: 50%;
+// 	transition: 0.5s;
+// 	transition-property: background, color, border;
+// }
+
+// .navLeft:hover,
+// .navRight:hover {
+// 	background: white;
+// 	color: black;
+// 	border: 0.5px solid gray;
+// }
+
+// .navLeft {
+// 	// left: 20px;
+// 	translate: -100% 0%;
+// }
+
+// .navRight {
+// 	translate: 100% 0%;
+// 	// right: 20px;
+// }
+
+.ButtonsBase {
+	position: relative;
+	// left: 50%;
+	// translate: -50% 0%;
+	// bottom: -10px;
+	display: flex;
+	gap: 20px;
+
+	button {
+		height: 35px;
+		width: 35px;
+		border-radius: 50%;
+		border: 0.4px solid gray;
+
+		transition: 0.3s background, 0.3s color;
+	}
+
+	button:hover {
+		cursor: pointer;
+		background: gray;
+		color: white;
+	}
+}

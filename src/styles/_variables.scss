@@ -1,0 +1,64 @@
+@use "helpers" as *;
+
+$myColor: #FFFFFF;
+
+
+:root {
+    &{
+        --height-head: clamp(#{rem(40)}, #{vw1920(100)}, #{rem(50)});
+        --margin-head: clamp(#{rem(40)}, #{vw1920(100)}, #{rem(50)});
+        
+        --margin-search-right: clamp(#{rem(10)}, #{vw1920(35)}, #{rem(70)});
+        
+        --translate-navigation: -50%;
+        
+        --position-after-input: 94%;
+        // --height-head: #{rem(50)};
+        // @media (width < 800px) {
+            //   --height-head: #{rem(40)};
+        // }
+        --color-white: #FFFFFF;
+        --color-black: #000000;
+        
+        
+        --color-light-gray: rgba(119, 119, 119, 0.548);
+        --color-gray: #3d3d3d;
+        --color-gray-1: rgb(63, 63, 63);
+        
+        --color-soft-blue: ;
+        
+        @include mobile{
+            // --height-head: rem(100);
+            --height-head: 45px;
+            --margin-head: 45px;
+        }
+        
+        
+        
+        --gradient: linear-gradient(
+            45deg,
+            var(--color-dark-15) 64%,
+            var(--color-accent) 136%
+        );
+        
+        --border: #{rem(1)} solid var(--color-dark-15);
+        
+        --shadow: 0 0 0 #{rem(3)} #191919;
+        
+        --font-family-base: 'Inter', sans-serif;
+        --font-family-accent: 'Kumbh Sans', sans-serif;
+        
+        --container-width: #{rem(1600)};
+        --container-padding-x: #{rem(16)};
+        
+        --transition-duration: 0.2s;
+        
+        --100vw: calc(100vw - var(--scrollbar-width));
+        
+        
+        
+        @include laptop {
+            --container-width: #{rem(1280)};
+        }
+    }
+}

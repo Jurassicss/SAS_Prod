@@ -1,0 +1,39 @@
+@use "../../styles/helpers" as *;
+
+
+
+@keyframes circle {
+    50%{clip-path: polygon(100% 47%, 100% 100%, 0 100%, 0 60%);
+}
+100%{
+    clip-path: polygon(100% 47%, 100% 100%, 0 100%, 0% 100%);
+    rotate: 1turn;
+}
+}
+
+
+.circle{
+    & {
+        position: relative;
+        width: clamp(rem(50), vw1920(70), rem(70));
+        aspect-ratio: 1;
+        border: 0px solid transparent;
+        border-radius: 50%;
+        margin-top: clamp(rem(30), vw1920(60), rem(60));
+        
+        
+        animation:circle 1.5s infinite linear;
+        clip-path: polygon(100% 47%, 100% 100%, 0 100%, 0% 100%);
+        
+        
+        background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 99%);
+        mask:radial-gradient(circle clamp(rem(22), vw1920(32),rem(32)),transparent 98%,#ffffff 100%);
+        -webkit-mask: radial-gradient(circle clamp(rem(22), vw1920(32),rem(32)),transparent 98%,#ffffff 100%);
+        
+
+        background: linear-gradient(to right, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 99%);
+        mask:radial-gradient(circle clamp(rem(22), vw1920(32),rem(32)),transparent 98%,#000000 100%);
+        -webkit-mask: radial-gradient(circle clamp(rem(22), vw1920(32),rem(32)),transparent 98%,#000000 100%);
+        margin-bottom: 100px;
+    }
+}
